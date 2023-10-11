@@ -13,11 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GitExcercise"
         tools:targetApi="31">
+
         <activity
             android:name=".module.main.MainActivity"
-            android:exported="true" />
+            android:exported="false" />
 
-        <activity android:name=".module.authentication.login.LoginActivity"
+        <activity
+            android:name=".module.authentication.login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,10 +28,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".module.authentication.forgotPassord.ForgotPasswordActivity"
+        <activity
+            android:name=".module.authentication.forgotPassword.ForgotPasswordActivity"
             android:exported="false" />
-        <activity android:name=".module.authentication.registration.RegistrationActivity"
-            android:exported="false" />
-    </application>
 
+        <activity
+            android:name=".module.authentication.registration.RegistrationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".module.profile.ProfileActivity"
+            android:exported="false" />
+
+    </application>
 </manifest>
