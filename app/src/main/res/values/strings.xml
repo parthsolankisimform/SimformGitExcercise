@@ -24,4 +24,8 @@
     <string name="text_okay">okay</string>
     <string name="msg_login_success">"Login Success"</string>
     <string name="msg_email_send">Email send For Verification</string>
+    <string name="edit">Edit</string>
+    <string name="text_Name">Name</string>
+    <string name="text_Username">username</string>
+    <string name="Save">Save</string>
 </resources>

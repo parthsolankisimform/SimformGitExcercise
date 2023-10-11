@@ -3,15 +3,11 @@ package simform.gitexcercise.android.module.authentication.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.widget.Toast
-import androidx.core.os.postDelayed
 import androidx.core.widget.addTextChangedListener
-import com.google.android.material.snackbar.Snackbar
 import simform.gitexcercise.android.R
 import simform.gitexcercise.android.databinding.ActivityLoginBinding
-import simform.gitexcercise.android.module.authentication.forgotPassord.ForgotPasswordActivity
+import simform.gitexcercise.android.module.authentication.forgotPassword.ForgotPasswordActivity
 import simform.gitexcercise.android.module.authentication.registration.RegistrationActivity
 
 class LoginActivity : AppCompatActivity() {

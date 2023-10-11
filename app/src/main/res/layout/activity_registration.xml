@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/image_company_logo"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/height_image_normal"
         android:contentDescription="@string/app_name"
         android:padding="@dimen/_30dp"
         android:src="@drawable/ic_simform"
@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/hint_enter_username"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
 
