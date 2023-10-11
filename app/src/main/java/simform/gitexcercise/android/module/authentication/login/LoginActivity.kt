@@ -3,10 +3,6 @@ package simform.gitexcercise.android.module.authentication.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.widget.Toast
-import androidx.core.os.postDelayed
 import androidx.core.widget.addTextChangedListener
 import com.google.android.material.snackbar.Snackbar
 import simform.gitexcercise.android.R
@@ -59,16 +55,20 @@ class LoginActivity : AppCompatActivity() {
             if (editTextEmail.text.isNullOrBlank()) {
                 textInputLayoutEmail.isErrorEnabled = true
                 textInputLayoutEmail.error = getString(R.string.text_error_email)
+            } else if (!isValidEmailFormat(editTextEmail.text.toString())) {
+                textInputLayoutEmail.isErrorEnabled = true
+                textInputLayoutEmail.error = getString(R.string.msg_email_not_matching_pattern)
             } else if (editTextPassword.text.isNullOrBlank()) {
                 textInputLayoutPassword.isErrorEnabled = true
                 textInputLayoutPassword.error = getString(R.string.text_error_password)
             } else {
-                Toast.makeText(
-                    applicationContext,
-                    getString(R.string.msg_login_success),
-                    Toast.LENGTH_SHORT
-                ).show()
+                Snackbar.make(root, getString(R.string.msg_login_success), Snackbar.LENGTH_SHORT).show()
             }
         }
     }
+
+    private fun isValidEmailFormat(email: String): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    }
+
 }

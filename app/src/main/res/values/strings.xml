@@ -24,4 +24,6 @@
     <string name="text_okay">okay</string>
     <string name="msg_login_success">"Login Success"</string>
     <string name="msg_email_send">Email send For Verification</string>
+    <string name="msg_email_not_matching_pattern">Email Address is not Appropriate</string>
+
 </resources>
