@@ -1,13 +1,7 @@
-package simform.gitexcercise.android.module.authentication.forgotPassord
+package simform.gitexcercise.android.module.authentication.forgotPassword
 
-import android.app.AlertDialog
-import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import androidx.appcompat.view.ContextThemeWrapper
-import androidx.core.os.postDelayed
 import androidx.core.widget.addTextChangedListener
 import com.google.android.material.snackbar.Snackbar
 import simform.gitexcercise.android.R

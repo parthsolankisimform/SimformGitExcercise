@@ -6,7 +6,12 @@ import android.os.Bundle
 import androidx.core.widget.addTextChangedListener
 import simform.gitexcercise.android.R
 import simform.gitexcercise.android.databinding.ActivityRegistrationBinding
-import simform.gitexcercise.android.module.main.MainActivity
+import simform.gitexcercise.android.module.profile.ProfileActivity
+import simform.gitexcercise.android.utils.Declarations
+import simform.gitexcercise.android.utils.PreferenceHelper
+import simform.gitexcercise.android.utils.PreferenceHelper.emailAddress
+import simform.gitexcercise.android.utils.PreferenceHelper.name
+import simform.gitexcercise.android.utils.PreferenceHelper.username
 
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrationBinding
@@ -61,7 +66,21 @@ class RegistrationActivity : AppCompatActivity() {
                 textInputLayoutPassword.isErrorEnabled = true
                 textInputLayoutPassword.error = getString(R.string.text_error_password)
             } else {
-                startActivity(Intent(this@RegistrationActivity, MainActivity::class.java))
+                val sharedPrefs =
+                    PreferenceHelper.customPreference(
+                        applicationContext,
+                        Declarations.sharedPreferences
+                    )
+                binding.apply {
+                    sharedPrefs.name = editTextName.text.toString()
+                    sharedPrefs.username = editTextUsername.text.toString()
+                    sharedPrefs.emailAddress = editTextEmail.text.toString()
+                }
+                startActivity(
+                    Intent(
+                        this@RegistrationActivity, ProfileActivity::class.java
+                    )
+                )
             }
         }
 
