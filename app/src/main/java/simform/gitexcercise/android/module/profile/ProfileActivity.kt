@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import simform.gitexcercise.android.databinding.ActivityProfileBinding
-import simform.gitexcercise.android.module.main.MainActivity
 import simform.gitexcercise.android.utils.Declarations
 import simform.gitexcercise.android.utils.PreferenceHelper
 import simform.gitexcercise.android.utils.PreferenceHelper.emailAddress
@@ -21,7 +20,7 @@ class ProfileActivity : AppCompatActivity() {
 
         doRetrieveData()
         binding.buttonEditProfile.setOnClickListener {
-            startActivity(Intent(this@ProfileActivity, MainActivity::class.java))
+            startActivity(Intent(this@ProfileActivity, EditProfileActivity::class.java))
         }
     }
 

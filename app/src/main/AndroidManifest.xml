@@ -39,5 +39,7 @@
             android:name=".module.profile.ProfileActivity"
             android:exported="false" />
 
+        <activity android:name=".module.profile.EditProfileActivity"
+            android:exported="false" />
     </application>
 </manifest>
